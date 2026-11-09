@@ -2,7 +2,7 @@ import {entryKey, keys, localDate, totals} from './model.mjs';
 const $ = id => document.getElementById(id);
 const f = $('entry-form'), editor = $('editor'), dateInput = $('date');
 const storageKey = 'dining-rewind-log-v1';
-let archive, sourceError, editing, originalLabel, selected = localDate(-1), logs = {};
+let archive, sourceError, editing, originalLabel, dateTouched, selected = localDate(-1), logs = {};
 const format = new Intl.NumberFormat('en-US', {maximumFractionDigits:1});
 try { logs = JSON.parse(localStorage.getItem(storageKey) || '{}') || {}; } catch {}
 function element(tag, text, cls) {
@@ -19,7 +19,8 @@ function button(text, fn, label) {
 const names = {kcal:'Calories',protein:'Protein',carbs:'Carbs',fat:'Fat'};
 const niceDate = date => new Intl.DateTimeFormat('en-US', {dateStyle:'full', timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'));
 const getEntries = () => Array.isArray(logs[selected]) ? logs[selected] : [];
-function setDate(date) {
+function setDate(date, explicit = true) {
+  if (explicit) dateTouched = true;
   if (!date || !Number.isFinite(Date.parse(date))) return;
   selected = date;
   dateInput.value = date;
@@ -35,11 +36,12 @@ function setDate(date) {
 }
 function renderMenu() {
   const out = $('results'), day = archive?.days[selected];
+  const labelCount = Object.keys(day?.labels || {}).length;
   out.replaceChildren();
   $('count').textContent = '';
   $('coverage').textContent = sourceError ? 'The archive could not be loaded.' :
     !archive ? 'Loading archived menus…' :
-    day ? (selected > localDate() ? 'Planned menu. Items may change.' : 'Published menu. Actual offerings may have changed.') :
+    day ? (selected > localDate() ? 'Planned menu. Items may change.' : 'Published menu. Actual offerings may have changed.') + (labelCount ? ' ' + labelCount + ' items have archived NetNutrition labels.' : ' Nutrition labels are not archived for this date.') :
     'No menu snapshot for this date.';
   if (!day) {
     if (!archive && !sourceError) return;
@@ -109,7 +111,7 @@ function openEditor(item = {}, index = null, label = null) {
   note.replaceChildren(document.createTextNode((item.group ? item.group+' · '+item.station+' · ' : '')+niceDate(selected)+'. '));
   const link = element('a', 'Look up NetNutrition ↗');
   link.href = 'https://netnutrition.cbord.com/nn-prod/WLU'; link.target='_blank'; link.rel='noopener';
-  if (label) note.append('Archived NetNutrition label. '); 
+  if (label) note.append('Archived NetNutrition label. ');
   note.append(link);
   for (const key of ['name','quantity','serving',...keys]) f.elements[key].value = item[key] ?? (key === 'quantity' ? 1 : '');
   editor.showModal();
@@ -133,7 +135,7 @@ $('today').onclick = () => setDate(localDate());
 $('yesterday').onclick = () => setDate(localDate(-1));
 dateInput.onchange = () => setDate(dateInput.value);
 $('search').oninput = $('group').onchange = renderMenu;
-setDate(selected);
+setDate(selected, false);
 try {
   const response = await fetch('./data/archive.json');
   if (!response.ok) throw new Error('Archive request failed');
@@ -142,4 +144,4 @@ try {
 } catch {
   archive = undefined; sourceError = true;
 }
-setDate(selected);
+setDate(!dateTouched && archive && !archive.days[selected] && !getEntries().length && archive.days[localDate()] ? localDate() : selected, false);
