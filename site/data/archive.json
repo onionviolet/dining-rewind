@@ -1,0 +1,817 @@
+{
+  "version": 1,
+  "days": {
+    "2026-11-09": {
+      "capturedAt": "2026-11-09T05:18:26.994Z",
+      "menu": {
+        "Marketplace Breakfast": {
+          "BREAKFAST": [
+            "Acai Chia Pudding",
+            "Pancake/Waffle/French Toast Topping Bar",
+            "Scrambled Eggs",
+            "Cheesy Scrambled Eggs",
+            "Mini Potato Pancakes",
+            "Sausage Patty",
+            "Belgian Waffles"
+          ]
+        },
+        "Marketplace Lunch": {
+          "Daily Dish": [
+            "Sauteed Edamame",
+            "Roasted Balsamic Mushrooms",
+            "Roasted Potatoes",
+            "Assorted Rolls",
+            "Cucumber & Radish Slaw",
+            "Citrus Marinated Flank Steak",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Chicken Katsu",
+            "Japanese Style Curry",
+            "Boiled Japanese Rice",
+            "Japanese Cucumber Salad",
+            "Japanese Potato Salad",
+            "Yasai Itame"
+          ],
+          "Lex Grill": [
+            "Sub Roll",
+            "Philly/French Dip Topping Bar",
+            "Fried Brussels Sprouts",
+            "Grilled Chicken Breast",
+            "Chicken Philly Cheese Steak",
+            "House Fries",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Stuffed Shells w/Spicy Marinara",
+            "Pepperoni Pizza",
+            "Spinach, Artichoke, Feta Pizza",
+            "White Pizza",
+            "Alfredo Sauce"
+          ],
+          "Soup": [
+            "Italian Wedding Soup",
+            "Tomato Basil Soup"
+          ]
+        },
+        "Marketplace Dinner": {
+          "Daily Dish": [
+            "Lemon Garlic Broccoli",
+            "Rotisserie Style Chicken",
+            "Breaded Eggplant w/ Bruschetta",
+            "Rice Pilaf",
+            "Assorted Rolls",
+            "Italian Tomato Salad",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Ramen Topping Bar",
+            "Shoyu Ramen Broth",
+            "Tonkotsu Broth",
+            "Steamed Gyoza",
+            "Ramen Noodles",
+            "Chashu Pork Belly",
+            "Gyoza Dipping Sauce",
+            "Marinated Tofu"
+          ],
+          "Lex Grill": [
+            "Potato Hot Dog Bun",
+            "Hot Dog Topping Bar",
+            "Grilled Chicken Breast",
+            "Beef Hot Dog",
+            "Hot Dog Chili",
+            "Potato Skins",
+            "Cheese Sauce",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Stuffed Shells w/Spicy Marinara",
+            "Pepperoni Pizza",
+            "Spinach, Artichoke, Feta Pizza",
+            "White Pizza",
+            "Alfredo Sauce"
+          ],
+          "Soup": [
+            "Italian Wedding Soup",
+            "Tomato Basil Soup"
+          ]
+        },
+        "Sorority Dining": {
+          "Sorority Lunch": [
+            "Toppings Bar",
+            "Potato Hamburger Bun",
+            "Tarragon Grilled Chicken",
+            "Beer Battered Cod",
+            "French Fries",
+            "Green Beans w/Lemon",
+            "Vegetarian Loaded Baked Potato Soup"
+          ],
+          "Sorority Dinner": [
+            "Beef Meatballs",
+            "Garlic Bread",
+            "Roasted Broccolini",
+            "Spaghetti",
+            "Red Pepper Zucchini Noodles",
+            "Zoodles",
+            "Marinara Sauce"
+          ]
+        },
+        "Cafe 77": {
+          "Daily Special": [
+            "Crispy Chicken Caesar Wrap",
+            "Crinkle Cut Fries - Fountain Drink"
+          ]
+        }
+      },
+      "labels": {
+        "[\"Marketplace Breakfast\",\"BREAKFAST\",\"Scrambled Eggs\"]": {
+          "serving": "4 oz (113 g)",
+          "kcal": 140,
+          "protein": 14,
+          "carbs": null,
+          "fat": 11
+        },
+        "[\"Marketplace Breakfast\",\"BREAKFAST\",\"Cheesy Scrambled Eggs\"]": {
+          "serving": "4 oz (101 g)",
+          "kcal": 140,
+          "protein": 13,
+          "carbs": null,
+          "fat": 10
+        },
+        "[\"Marketplace Breakfast\",\"BREAKFAST\",\"Mini Potato Pancakes\"]": {
+          "serving": "3 pieces (56 g)",
+          "kcal": 150,
+          "protein": 3,
+          "carbs": 15,
+          "fat": 8
+        },
+        "[\"Marketplace Breakfast\",\"BREAKFAST\",\"Sausage Patty\"]": {
+          "serving": "2 patties (44 g)",
+          "kcal": 120,
+          "protein": 9,
+          "carbs": 0,
+          "fat": 9
+        },
+        "[\"Marketplace Breakfast\",\"BREAKFAST\",\"Acai Chia Pudding\"]": {
+          "serving": "4 oz (145 g)",
+          "kcal": 130,
+          "protein": 3,
+          "carbs": 18,
+          "fat": 6
+        },
+        "[\"Marketplace Breakfast\",\"BREAKFAST\",\"Belgian Waffles\"]": {
+          "serving": "1 waffle (75 g)",
+          "kcal": 170,
+          "protein": 4,
+          "carbs": 34,
+          "fat": 2.5
+        }
+      }
+    },
+    "2026-11-10": {
+      "capturedAt": "2026-11-09T05:18:26.994Z",
+      "menu": {
+        "Marketplace Breakfast": {
+          "BREAKFAST": [
+            "Scrambled Eggs",
+            "Cheesy Scrambled Eggs",
+            "French Toast Sticks",
+            "Home Fries",
+            "Citrus & Honey Parfait",
+            "Turkey Sausage Links"
+          ]
+        },
+        "Marketplace Lunch": {
+          "Daily Dish": [
+            "Roasted Butternut Squash",
+            "Sundried Tomato Chicken & Pasta",
+            "Creamy Smoked Gouda Polenta",
+            "Yeast Roll",
+            "White Bean Salad w/Lemon",
+            "California Vegetable Medley",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Chicken Katsu",
+            "Japanese Style Curry",
+            "Boiled Japanese Rice",
+            "Japanese Cucumber Salad",
+            "Japanese Potato Salad",
+            "Yasai Itame"
+          ],
+          "Lex Grill": [
+            "Potato Hamburger Bun",
+            "Burger & Steak Sandwich Topping Bar",
+            "Hamburger",
+            "Grilled Chicken Breast",
+            "Crinkle Cut Fries",
+            "Broccoli & Cheese Bites",
+            "Sautéed Mushrooms & Onions",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Vegetarian Chili Mac",
+            "Cheese Pizza",
+            "Chicken, Bacon, & Queso Pizza",
+            "Hot Honey Pepperoni Pizza",
+            "Marinara Sauce"
+          ],
+          "Soup": [
+            "Broccoli Cheddar Soup",
+            "Chicken Noodle Soup"
+          ]
+        },
+        "Marketplace Dinner": {
+          "Daily Dish": [
+            "Roasted Pork Loin",
+            "Tofu w/Peppers & Onions",
+            "Wild Rice",
+            "Southern Style Green Beans",
+            "Buttered Corn",
+            "Onion Gravy",
+            "Yeast Roll",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Shoyu Ramen Broth",
+            "Tonkotsu Broth",
+            "Steamed Gyoza",
+            "Ramen Noodles",
+            "Chashu Pork Belly",
+            "Marinated Tofu",
+            "Ramen Topping Bar",
+            "Gyoza Dipping Sauce"
+          ],
+          "Lex Grill": [
+            "Potato Bun",
+            "Chicken Sandwich Topping Bar",
+            "Grilled Chicken Breast",
+            "Spicy Chicken Fillet",
+            "Macaroni & Cheese Bites",
+            "French Fries",
+            "Grilled Portabello",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Cheese Pizza",
+            "Chicken, Bacon, & Queso Pizza",
+            "Hot Honey Pepperoni Pizza",
+            "Vegetarian Chili Mac"
+          ],
+          "Soup": [
+            "Broccoli Cheddar Soup",
+            "Chicken Noodle Soup"
+          ]
+        },
+        "Sorority Dining": {
+          "Sorority Breakfast": [
+            "Baked Ambrosia",
+            "Scrambled Eggs",
+            "Pancakes",
+            "Blueberry Pancakes",
+            "Pork Sausage Links"
+          ],
+          "Sorority Lunch": [
+            "Toppings Bar",
+            "Flour Tortilla",
+            "Latin Black Beans",
+            "Pasilla Chili Roasted Chicken",
+            "Tortilla Chips",
+            "Cilantro & Lime Rice",
+            "Queso",
+            "Green Chile Tofu"
+          ],
+          "Sorority Dinner": [
+            "Broccoli & Red Peppers",
+            "Fried Chicken",
+            "3 Cheese Mac & Cheese",
+            "Hawaiian Roll",
+            "Baked Sweet Potato"
+          ]
+        },
+        "Cafe 77": {
+          "Daily Special": [
+            "Pesto Grilled Cheese",
+            "Crinkle Cut Fries - Fountain Drink"
+          ]
+        }
+      },
+      "labels": {}
+    },
+    "2026-11-11": {
+      "capturedAt": "2026-11-09T05:18:26.994Z",
+      "menu": {
+        "Marketplace Breakfast": {
+          "BREAKFAST": [
+            "Pancake/Waffle/French Toast Topping Bar",
+            "Scrambled Eggs",
+            "Cheesy Scrambled Eggs",
+            "Buttermilk Pancakes",
+            "Sweet Potato Tots",
+            "Sausage patty",
+            "Strawberries & Cottage Cheese"
+          ]
+        },
+        "Marketplace Lunch": {
+          "Daily Dish": [
+            "Sub Roll",
+            "Meatball Sandwich Topping Bar",
+            "Cannellini Beans w/Sun Dried Tomato",
+            "Garlic Bread",
+            "Meatballs",
+            "Pasta Primavera",
+            "Roasted Spaghetti Squash",
+            "Baked Italian Tomatoes & Zucchini",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Bamya Alicha (Okra)",
+            "Doro Wat (Spicy Chicken Stew)",
+            "Fossolia (Green Beans)",
+            "Key Sir Alicha (Beet & Potato)",
+            "Kik Alicha (Split Pea Stew)",
+            "Atikilt Ruz (Rice)"
+          ],
+          "Lex Grill": [
+            "Potato Hamburger Bun",
+            "Chicken Sandwich Topping Bar",
+            "Grilled Chicken Breast",
+            "Fried Chicken Fillet",
+            "House Fries",
+            "Fried Green Beans",
+            "Potato Salad",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Kale Pesto",
+            "Chef's Choice Pasta",
+            "Margherita Pizza",
+            "Meat Lover's Pizza",
+            "Pepperoni Pizza",
+            "Butternut Squash Ravioli"
+          ],
+          "Soup": [
+            "Potato Leek Soup",
+            "Tomato Basil Soup"
+          ]
+        },
+        "Marketplace Dinner": {
+          "Daily Dish": [
+            "Cheddar Biscuit",
+            "Arugula & Herb Salad",
+            "Roasted Garlic Parmesan Chickpeas",
+            "Lemon Rice",
+            "Pesto Salmon",
+            "Basmati Rice",
+            "Zucchini & Yellow Squash",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Potjiekos",
+            "Chakalaka (Vegetable Relish)",
+            "Fried Plantains",
+            "Jollof Rice",
+            "Grilled Corn w/Peri Peri Sauce"
+          ],
+          "Lex Grill": [
+            "Potato Hamburger Bun",
+            "Burger & Steak Sandwich Topping Bar",
+            "Turkey Burger",
+            "Grilled Chicken Breast",
+            "Crinkle Cut Fries",
+            "Pierogis",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Kale Pesto",
+            "Chef's Choice Pasta",
+            "Margherita Pizza",
+            "Meat Lover's Pizza",
+            "Pepperoni Pizza",
+            "Butternut Squash Ravioli"
+          ],
+          "Soup": [
+            "Potato Leek Soup",
+            "Tomato Basil Soup"
+          ]
+        },
+        "Sorority Dining": {
+          "Sorority Lunch": [
+            "Thai Red Chicken",
+            "Thai Coconut Curry",
+            "Mint Jasmine Rice",
+            "Papaya Bok Choy Stir Fry",
+            "Vegetable Spring Rolls"
+          ],
+          "Sorority Dinner": [
+            "Crumbled Blue Cheese",
+            "Tuscan White Beans",
+            "Garlic Bread",
+            "Garlic Broccoli Rabe",
+            "Caramelized Carrots",
+            "Mashed Potatoes",
+            "Flank Steak w/Chimichurri Sauce"
+          ]
+        },
+        "Cafe 77": {
+          "Daily Special": [
+            "Buffalo Chicken Wrap",
+            "Crinkle Cut Fries - Fountain Drink"
+          ]
+        }
+      },
+      "labels": {}
+    },
+    "2026-11-12": {
+      "capturedAt": "2026-11-09T05:18:26.994Z",
+      "menu": {
+        "Marketplace Breakfast": {
+          "BREAKFAST": [
+            "Turkey Sausage Links",
+            "Turkey Bacon",
+            "Cinnamon Raisin French Toast Casserole",
+            "Cottage Cheese w/ Peaches & Granola",
+            "Scrambled Eggs",
+            "Cheesy Scrambled Eggs",
+            "Home Fries"
+          ]
+        },
+        "Marketplace Lunch": {
+          "Daily Dish": [
+            "Ginger Broccoli",
+            "Shrimp Lo Mein",
+            "Kung Pao Noodles",
+            "Assorted Rolls",
+            "Teriyaki Tofu",
+            "Vegetable Potstickers",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Bamya Alicha (Okra)",
+            "Doro Wat (Spicy Chicken Stew)",
+            "Fossolia (Green Beans)",
+            "Key Sir Alicha (Beet & Potato)",
+            "Kik Alicha (Split Pea Stew)",
+            "Atikilt Ruz (Rice)"
+          ],
+          "Lex Grill": [
+            "Bacon",
+            "Potato Hamburger Bun",
+            "Burger & Steak Sandwich Topping Bar",
+            "Hamburger",
+            "Grilled Chicken Breast",
+            "Crinkle Cut Fries",
+            "Potato Skins",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Pasta Primavera",
+            "Cheese Pizza",
+            "Chicken Bacon Ranch Pizza",
+            "Hot Honey Pepperoni Pizza",
+            "Marinara Sauce"
+          ],
+          "Soup": [
+            "Chicken Tortilla Soup",
+            "Roasted Red Pepper & Gouda Soup"
+          ]
+        },
+        "Marketplace Dinner": {
+          "Daily Dish": [
+            "Baked Beans",
+            "Fried Chicken",
+            "Cornbread",
+            "Vegan Collard Greens",
+            "Vegetable Pot Pie",
+            "Yellow Rice",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Potjiekos",
+            "Chakalaka (Vegetable Relish)",
+            "Fried Plantains",
+            "Jollof Rice",
+            "Grilled Corn w/Peri Peri Sauce"
+          ],
+          "Lex Grill": [
+            "Taco Topping Bar",
+            "Beef Taco",
+            "Grilled Chicken Breast",
+            "Chile Queso",
+            "Tortilla Chips",
+            "Jalapeño Cream Cheese Poppers",
+            "Steamed Vegetables",
+            "Flour Tortilla",
+            "Refried Beans",
+            "Mexican Rice"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Pasta Primavera",
+            "Cheese Pizza",
+            "Chicken Bacon Ranch Pizza",
+            "Hot Honey Pepperoni Pizza",
+            "Marinara Sauce"
+          ],
+          "Soup": [
+            "Chicken Tortilla Soup",
+            "Roasted Red Pepper & Gouda Soup"
+          ]
+        },
+        "Sorority Dining": {
+          "Sorority Breakfast": [
+            "Red Grapes",
+            "Pineapple Chunks",
+            "Oat & Honey Granola",
+            "Vanilla Fat Free Greek Yogurt",
+            "Mixed Berries",
+            "Bacon",
+            "Bananas Foster French Toast Casserole",
+            "Scrambled Eggs",
+            "Potatoes O'Brien"
+          ],
+          "Sorority Lunch": [
+            "Hamburger Toppings",
+            "Potato Hot Dog Bun",
+            "Potato Hamburger Bun",
+            "Beef Burger",
+            "Green Beans w/Garlic",
+            "All Beef Hot Dog",
+            "Jalapeno Cream Cheese Poppers"
+          ],
+          "Sorority Dinner": [
+            "Roasted Balsamic Brussels Sprouts",
+            "Tortellini w/Mornay Sauce",
+            "Roasted Potatoes",
+            "Salmon w/Harissa Sauce"
+          ]
+        },
+        "Cafe 77": {
+          "Daily Special": [
+            "Bacon Cheddar Smashburger",
+            "Crinkle Cut Fries - Fountain Drink"
+          ]
+        }
+      },
+      "labels": {}
+    },
+    "2026-11-13": {
+      "capturedAt": "2026-11-09T05:18:26.994Z",
+      "menu": {
+        "Marketplace Breakfast": {
+          "BREAKFAST": [
+            "Acai Chia Pudding",
+            "Scrambled Eggs",
+            "Cheesy Scrambled Eggs",
+            "Hash Brown Patty",
+            "Chicken Sausage Links",
+            "Waffle Sticks"
+          ]
+        },
+        "Marketplace Lunch": {
+          "Daily Dish": [
+            "Roasted Brussels Sprouts",
+            "Cornbread",
+            "Bourbon Brown Sugar Pork Loin",
+            "Stuffing",
+            "Mashed Sweet Potatoes",
+            "Swiss Chard W/Garlic & Lemon",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Bamya Alicha (Okra)",
+            "Doro Wat (Spicy Chicken Stew)",
+            "Fossolia (Green Beans)",
+            "Key Sir Alicha (Beet & Potato)",
+            "Kik Alicha (Split Pea Stew)",
+            "Atikilt Ruz (Rice)"
+          ],
+          "Lex Grill": [
+            "Potato Hamburger Bun",
+            "Fish Sandwich Topping Bar",
+            "Grilled Chicken Breast",
+            "Mini Turkey Corn Dogs",
+            "Beer Battered Cod",
+            "Old Bay Fries",
+            "Hushpuppies",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Baked Ziti w/Meat Sauce",
+            "Buffalo Chicken Pizza",
+            "Four Cheese Pizza",
+            "Pepperoni Pizza",
+            "White Wine Garlic Sauce"
+          ],
+          "Soup": [
+            "Corn & Andouille Chowder",
+            "Hearty Vegetable Soup"
+          ]
+        },
+        "Marketplace Dinner": {
+          "Daily Dish": [
+            "Aloo Gobhi",
+            "Naan",
+            "Tandoori Chicken",
+            "Vegetable Coconut Curry",
+            "Dal Tadka (Lentils)",
+            "Basmati Rice",
+            "White Rice"
+          ],
+          "Lex Grill": [
+            "Po'Boy Topping Bar",
+            "Grilled Chicken Breast",
+            "Mini Turkey Corn Dogs",
+            "Cajun Fries",
+            "Popcorn Shrimp",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Baked Ziti w/Meat Sauce",
+            "Buffalo Chicken Pizza",
+            "Four Cheese Pizza",
+            "Pepperoni Pizza",
+            "White Wine Garlic Sauce"
+          ],
+          "Soup": [
+            "Corn & Andouille Chowder",
+            "Hearty Vegetable Soup"
+          ]
+        },
+        "Sorority Dining": {
+          "Sorority Lunch": [
+            "Ramen Toppings",
+            "Chicken Ramen Broth",
+            "Vegetarian Shoyu Ramen Broth",
+            "Ginger Soy Chicken",
+            "Sweet Chili Tofu"
+          ],
+          "Sorority Dinner": [
+            "Garllic Bread",
+            "Balsamic Chicken w/Bruschetta",
+            "Breaded Mushrooms",
+            "Penne alla Vodka",
+            "Lemon Roasted Zucchini"
+          ]
+        },
+        "Cafe 77": {
+          "Daily Special": [
+            "Chicken Cheesesteak Wrap",
+            "Crinkle Cut Fries - Fountain Drink"
+          ]
+        }
+      },
+      "labels": {}
+    },
+    "2026-11-14": {
+      "capturedAt": "2026-11-09T05:18:26.994Z",
+      "menu": {
+        "Marketplace Lunch": {
+          "Daily Dish": [
+            "Carved Strip Loin",
+            "Nutella-Filled Croissant",
+            "Steamed Green Beans",
+            "Fruit & Yogurt Parfait",
+            "Garlic Roasted Potato Wedges",
+            "French Onion Strata",
+            "White Rice"
+          ],
+          "Lex Grill": [
+            "Bacon",
+            "Grilled Chicken Breast",
+            "Scrambled Eggs",
+            "Cheesy Scrambled Eggs",
+            "French Toast",
+            "Home Fries (Cubes)",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Omelet MTO"
+          ],
+          "Soup": [
+            "Butternut Squash Soup",
+            "Tomato Basil Soup"
+          ]
+        },
+        "Marketplace Dinner": {
+          "Daily Dish": [
+            "Roasted Butternut Squash",
+            "Chicken Marsala",
+            "Brown Rice Pilaf",
+            "Lemon Sautéed Spinach",
+            "Fresh Vegetable Medley",
+            "White Rice"
+          ],
+          "Lex Grill": [
+            "Sub Roll",
+            "Philly/French Dip Topping Bar",
+            "Garlic Cheese Curds",
+            "Grilled Chicken Breast",
+            "House Fries",
+            "Philly Cheesesteak",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Garlic Breadsticks",
+            "Chef's Choice Pasta",
+            "Cheese Pizza",
+            "Pepperoni Pizza",
+            "Za'atar Pizza",
+            "Marinara Sauce"
+          ],
+          "Soup": [
+            "Butternut Squash Soup",
+            "Tomato Basil Soup"
+          ]
+        }
+      },
+      "labels": {}
+    },
+    "2026-11-15": {
+      "capturedAt": "2026-11-09T05:18:26.994Z",
+      "menu": {
+        "Marketplace Lunch": {
+          "Daily Dish": [
+            "Taco Topping Bar",
+            "Vegan Chili",
+            "Chorizo",
+            "Churros",
+            "Mexican Eggs",
+            "Jicama Fruit Salad",
+            "Mexican Rice",
+            "White Rice"
+          ],
+          "Lex Grill": [
+            "Pancake/Waffle/French Toast Topping Bar",
+            "Grilled Chicken Breast",
+            "Scrambled Eggs",
+            "Cheesy Scrambled Eggs",
+            "Blueberry Pancakes",
+            "Hash Brown Patty",
+            "Chicken Sausage Links",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Omelet MTO"
+          ],
+          "Soup": [
+            "Chicken Noodle Soup",
+            "Loaded Baked Potato Soup"
+          ]
+        },
+        "Marketplace Dinner": {
+          "Daily Dish": [
+            "Greek Shrimp Pasta",
+            "Cauliflower Piccata",
+            "Lemon Rice",
+            "Tuscan Kale & Cannellini Bean Saute",
+            "Baked Italian Tomatoes & Zucchini",
+            "White Rice"
+          ],
+          "Global Kitchen": [
+            "Danmuji",
+            "Beef Bulgogi",
+            "Broccolini Namul",
+            "Gochugalu (Korean Cucumber Salad)",
+            "Kimchi-jjigae (Kimchi Stew)",
+            "Korean Bean Sprouts",
+            "Korean Macaroni Salad",
+            "White Rice",
+            "Tteokbokki"
+          ],
+          "Lex Grill": [
+            "Potato Hamburger Bun",
+            "Burger & Steak Sandwich Topping Bar",
+            "Hamburger",
+            "Grilled Chicken Breast",
+            "Crinkle Cut Fries",
+            "Macaroni & Cheese Bites",
+            "Sauteed Mushrooms & Onions",
+            "Steamed Vegetables"
+          ],
+          "Pizza & Pasta": [
+            "Chef's Choice Pasta",
+            "Garlic Knots",
+            "Cheese Pizza",
+            "Pepperoni Pizza",
+            "Teriyaki Chicken Pizza",
+            "Marinara Sauce"
+          ],
+          "Soup": [
+            "Chicken Noodle Soup",
+            "Loaded Baked Potato Soup"
+          ]
+        }
+      },
+      "labels": {}
+    }
+  },
+  "first": "2026-11-09"
+}

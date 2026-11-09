@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Look up past W&amp;L dining menus and keep a private meal log.">
+<title>Dining Rewind · W&amp;L menu archive</title>
+<link rel="icon" type="image/svg+xml" href="./mark.svg">
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.js"></script>
+</head>
+<body>
+<header class="mast"><div class="wrap nav"><a class="brand" href="./"><img src="./mark.svg" alt="" width="36" height="36"> Dining Rewind</a><a class="source" href="https://netnutrition.cbord.com/nn-prod/WLU" target="_blank" rel="noopener">NetNutrition ↗</a></div></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="title">
+<div><p class="eyebrow"><span></span> W&amp;L DINING ARCHIVE</p><h1 id="title">What did<br>you eat<span>?</span></h1><p>Find the menu you missed. Log what was on your plate and add up your macros.</p></div>
+<div class="art" aria-hidden="true"><svg viewBox="0 0 260 170" fill="none"><circle cx="132" cy="85" r="70" stroke="currentColor" stroke-width="1.4"/><circle cx="132" cy="85" r="57" stroke="currentColor" stroke-width="1.4"/><path d="M157 72a28 28 0 1 1-13-12m13-13v25h-25" stroke="#d9ee96" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M39 34v31m9-31v31m9-31v31m-18-2c0 9 4 14 9 14s9-5 9-14m-9 14v59m165-102c-8 7-13 23-13 44h13m0-44v102" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12 84h12m-6-6v12m213 19h17m-8-8v16" stroke="#d9ee96" stroke-width="1.4"/></svg><span>THE MENU, REMEMBERED</span></div>
+</section>
+<section class="datebar" aria-label="Menu date">
+<div><p class="eyebrow">DINING DATE · EASTERN TIME</p><strong id="date-title"></strong></div>
+<div class="date-actions"><button id="yesterday" type="button">Yesterday</button><button id="today" type="button">Today</button><label class="date-input"><span class="sr">Choose a date</span><input id="date" type="date"></label></div>
+</section>
+<div class="layout">
+<section class="menu" aria-labelledby="menu-title">
+<div class="section-top"><div><p class="eyebrow">01 / FIND YOUR FOOD</p><h2 id="menu-title">On the menu</h2></div><span id="count" class="chip" aria-live="polite"></span></div>
+<div class="filters"><label><span class="sr">Search food or station</span><input type="search" id="search" placeholder="Search food or station…"></label><label><span class="sr">Filter by venue or meal</span><select id="group"><option value="">All menus</option></select></label></div>
+<p class="hint" id="coverage" aria-live="polite">Loading archived menus…</p>
+<div id="results"></div>
+</section>
+<aside class="log" aria-labelledby="log-title">
+<p class="eyebrow">02 / BUILD YOUR LOG</p><h2 id="log-title">My plate</h2><p class="hint">Saved in this browser for the selected date.</p>
+<dl id="totals" class="totals" aria-live="polite"></dl><p class="hint" id="total-note" aria-live="polite"></p>
+<div id="entries"></div>
+<button type="button" id="custom" class="primary">+ Add food manually</button>
+</aside>
+</div>
+</main>
+<footer class="wrap footer"><span>Independent student tool · Published menus can change.</span><a href="https://www.wlu.edu/dining-services/campus-dining-venues-and-menus/the-marketplace" target="_blank" rel="noopener">W&amp;L dining menus ↗</a><a href="https://github.com/onionviolet/dining-rewind">GitHub ↗</a></footer>
+<dialog id="editor" aria-labelledby="editor-title">
+<form id="entry-form">
+<p class="eyebrow">MY PLATE</p><h2 id="editor-title">Log food</h2><p id="editor-note" class="hint"></p>
+<label>Food name<input name="name" required maxlength="160"></label>
+<div class="form-grid"><label>Portions eaten<input name="quantity" type="number" required min="0.01" max="1000" step="any"></label><label>Serving size or unit<input name="serving" maxlength="80" placeholder="e.g. 1 cup"></label></div>
+<p class="hint">Enter values <strong>per serving</strong>. Leave any unknown value blank.</p>
+<div class="form-grid macro-fields"><label>Calories (kcal)<input name="kcal" type="number" min="0" max="10000" step="any"></label><label>Protein (g)<input name="protein" type="number" min="0" max="10000" step="any"></label><label>Carbs (g)<input name="carbs" type="number" min="0" max="10000" step="any"></label><label>Fat (g)<input name="fat" type="number" min="0" max="10000" step="any"></label></div>
+<div class="form-actions"><button type="button" id="cancel">Cancel</button><button type="submit" class="primary">Save to my plate</button></div>
+</form>
+</dialog>
+<noscript><p class="wrap">Enable JavaScript to browse menus and use the meal log.</p></noscript>
+</body>
+</html>
