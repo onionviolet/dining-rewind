@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Update the archive · Dining Rewind</title>
+<link rel="icon" type="image/svg+xml" href="./mark.svg">
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./update.js"></script>
+</head>
+<body>
+<header class="mast"><div class="wrap nav"><a class="brand" href="./"><img src="./mark.svg" alt="" width="36" height="36"> Dining Rewind</a><a class="source" href="./">Back to menus</a></div></header>
+<main class="wrap updater">
+<section class="menu">
+<p class="eyebrow">KEEP THE ARCHIVE CURRENT</p><h1>Update the archive</h1>
+<p>Anyone can read the archive. Publishing changes requires write access to the GitHub repository.</p>
+<h2>Add the next week</h2>
+<ol>
+<li>Open <a href="https://mga1.wlu.edu/campusnotices/feeds/menus.php" target="_blank" rel="noopener">W&amp;L’s weekly menu feed ↗</a> and copy the JSON.</li>
+<li>In <a href="https://github.com/onionviolet/dining-rewind/actions/workflows/pages.yml" target="_blank" rel="noopener">GitHub Actions ↗</a>, click <strong>Run workflow</strong> and paste it into <strong>Weekly menu JSON</strong>.</li>
+<li>Uncheck <strong>Preview only</strong> and run it to publish. Earlier dates already in the archive stay as they were.</li>
+</ol>
+<p class="hint">The feed rolls over. Save each week while it is available. A preview run checks the data without saving it.</p>
+</section>
+<section class="menu">
+<p class="eyebrow">OPTIONAL / ADD SERVING SIZES AND MACROS</p><h2>Add nutrition labels</h2>
+<p>Check the dish and date in <a href="https://netnutrition.cbord.com/nn-prod/WLU" target="_blank" rel="noopener">NetNutrition ↗</a>. If the date is new, publish its menu first.</p>
+<form id="label-form">
+<div class="form-grid"><label>Saved date<select id="label-date" required></select></label><label>Menu<select id="label-menu" required></select></label></div>
+<div class="form-grid"><label>Food<select id="label-food" required></select></label><label>Serving size<input id="label-serving" required maxlength="80" placeholder="e.g. 4 oz (113 g)"></label></div>
+<p class="hint">Use values per serving. If the label says NA, leave that field blank.</p>
+<div class="form-grid macro-fields">
+<label>Calories (kcal)<input id="label-kcal" type="number" min="0" max="10000" step="any"></label>
+<label>Protein (g)<input id="label-protein" type="number" min="0" max="10000" step="any"></label>
+<label>Carbs (g)<input id="label-carbs" type="number" min="0" max="10000" step="any"></label>
+<label>Fat (g)<input id="label-fat" type="number" min="0" max="10000" step="any"></label>
+</div>
+<button id="queue-label" class="primary" type="submit" disabled>Add label to update</button>
+<p id="update-status" class="hint" role="status">Loading saved menus…</p>
+</form>
+<div id="prepared" hidden>
+<label for="payload">Prepared label JSON</label>
+<textarea id="payload" rows="5" readonly spellcheck="false"></textarea>
+<button id="copy-labels" type="button">Copy labels</button>
+<p class="hint">Paste this into <strong>Verified NetNutrition labels JSON</strong> in the same GitHub workflow. You can leave Weekly menu JSON blank.</p>
+</div>
+</section>
+</main>
+</body>
+</html>

@@ -1,26 +1,89 @@
-name: Publish Dining Rewind
+name: Update and publish Dining Rewind
 on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      menu_json:
+        description: 'Weekly menu JSON (optional if adding labels only)'
+        type: string
+      labels_json:
+        description: 'Verified NetNutrition labels JSON (optional)'
+        type: string
+      preview:
+        description: 'Preview only: validate without saving or publishing'
+        type: boolean
+        default: true
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
 concurrency:
-  group: pages
+  group: dining-rewind-pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  import:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && (inputs.menu_json != '' || inputs.labels_json != '')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      revision: ${{ steps.update.outputs.revision }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Validate and save menu archive
+        id: update
+        env:
+          MENU_JSON: ${{ inputs.menu_json }}
+          LABELS_JSON: ${{ inputs.labels_json }}
+          PREVIEW_ONLY: ${{ inputs.preview }}
+        run: |
+          set -euo pipefail
+          menu_file=-
+          label_args=()
+          if [[ -n "$MENU_JSON" ]]; then
+            menu_file="$RUNNER_TEMP/dining-menu.json"
+            printf '%s' "$MENU_JSON" > "$menu_file"
+          fi
+          if [[ -n "$LABELS_JSON" ]]; then
+            label_file="$RUNNER_TEMP/dining-labels.json"
+            printf '%s' "$LABELS_JSON" > "$label_file"
+            label_args+=("$label_file")
+          fi
+          node scripts/import-menu.mjs "$menu_file" "${label_args[@]}" | tee -a "$GITHUB_STEP_SUMMARY"
+          git diff --check
+          if [[ "$PREVIEW_ONLY" == true ]]; then
+            echo "Preview only: no changes saved." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git add site/data/archive.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Update dining menu archive'
+            git push origin HEAD:main
+          fi
+          echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: import
+    if: |
+      always() && !cancelled() && github.ref == 'refs/heads/main' &&
+      (needs.import.result == 'success' || needs.import.result == 'skipped') &&
+      (github.event_name == 'push' || !inputs.preview)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.publish.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.import.outputs.revision || 'main' }}
+          persist-credentials: false
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

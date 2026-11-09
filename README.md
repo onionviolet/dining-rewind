@@ -10,9 +10,16 @@ Six November 9 Marketplace breakfast labels were manually checked in [W&L NetNut
 
 ## Updating the shared archive
 
-1. Save a current copy of the [weekly menu JSON](https://mga1.wlu.edu/campusnotices/feeds/menus.php) manually. It maps date → menu → station → food names.
-2. Run `node scripts/import-menu.mjs /path/to/menu.json`. Import refreshes dates from today onward in Eastern time and keeps earlier snapshots. If the feed has already rolled forward without a date ever being captured, leave that date missing.
-3. To add manually checked NetNutrition labels, pass an optional second file. It contains a JSON array with `date`, `group`, `station`, `name`, `serving`, and per-serving `kcal`, `protein`, `carbs`, and `fat`. Use `null` for unknown values. Match the date and names in the archive; check that the underlying dishes and serving sizes agree before entering values.
-4. Review the changes to `site/data/archive.json`. Push a reviewed update to `main` to publish it via GitHub Actions.
+Ask Codex to “refresh Dining Rewind” to have it inspect the current W&L feed, preview the import, publish, and verify that the new dates are live. Ask for specific dishes if you also want NetNutrition labels checked.
+
+For a self-service update, open the [archive updater](https://onionviolet.github.io/dining-rewind/update.html). Repository collaborators with write access can publish from the [GitHub workflow](https://github.com/onionviolet/dining-rewind/actions/workflows/pages.yml).
+
+1. Copy the [current weekly menu JSON](https://mga1.wlu.edu/campusnotices/feeds/menus.php) while that week is still available. In GitHub, choose **Run workflow** on the `main` branch and paste it into **Weekly menu JSON**.
+2. Run with **Preview only** checked to validate and see counts without making changes. When ready to save and publish, run again with **Preview only** unchecked.
+3. To add labels, use the updater's date and dish picker, enter values checked in NetNutrition, then copy the prepared JSON into **Verified NetNutrition labels JSON**. The weekly menu field can stay blank for a labels-only update.
+
+An import adds new dates, refreshes current and future menus, and preserves existing past menus. It can backfill a missing date only if you supply an authentic snapshot for that date. Label imports can add or correct nutrition for an existing past menu item. GitHub stores the revised archive in version history and publishes it to Pages. Use the GitHub run summary to see what changed.
+
+For terminal updates, run `node scripts/import-menu.mjs /path/to/menu.json [verified-labels.json]`. Pass `-` in place of the menu path for labels only. Commit the reviewed change to `site/data/archive.json` and push to `main`.
 
 The W&L feed host and CBORD both disallow automated crawling in their robots files. This repository has no scheduled collector. A recurring import needs a source approved for automated access by the provider. Local preview: `python3 -m http.server 8765 --bind 127.0.0.1 --directory site`.
